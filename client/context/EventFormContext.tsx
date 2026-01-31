@@ -50,7 +50,7 @@ export const EventFormProvider = ({ children }: { children: ReactNode }) => {
             }
             const data = await response.json();
             alert("Event created successfully!");
-            // Reset form or redirect could go here
+            window.location.reload();
         } catch (error) {
             console.error("Error submitting form:", error);
             alert("Failed to create event.");
