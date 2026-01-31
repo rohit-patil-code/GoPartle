@@ -40,7 +40,7 @@ export const EventFormProvider = ({ children }: { children: ReactNode }) => {
 
     const submitForm = async () => {
         try {
-            const response = await fetch("https://api.go.rohitcodes.tech", {
+            const response = await fetch("https://api.go.rohitcodes.tech/api/requirements", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
