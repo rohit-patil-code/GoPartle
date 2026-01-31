@@ -23,11 +23,11 @@ export default function Step1() {
 
     return (
         <form onSubmit={handleNext} className="space-y-6 animate-in fade-in duration-500">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Step 1: Basic Event Details</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4 border-b pb-2">Step 1: Basic Event Details</h2>
 
             <div className="grid grid-cols-1 gap-6">
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Event Name</label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Event Name</label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <Type className="h-5 w-5 text-gray-400" />
@@ -37,7 +37,7 @@ export default function Step1() {
                             name="eventName"
                             value={formData.eventName}
                             onChange={handleChange}
-                            className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:bg-white focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-2.5 transition-all"
+                            className="pl-10 block w-full rounded-lg border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 border focus:bg-white focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm py-2.5 transition-all outline-none focus:ring-1"
                             placeholder="e.g. Summer Tech Fest"
                             required
                         />
@@ -45,7 +45,7 @@ export default function Step1() {
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Event Type</label>
+                    <label className="block text-sm font-medium text-gray-900 mb-2">Event Type</label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <FileText className="h-5 w-5 text-gray-400" />
@@ -54,7 +54,7 @@ export default function Step1() {
                             name="eventType"
                             value={formData.eventType}
                             onChange={handleChange}
-                            className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:bg-white focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-2.5 transition-all"
+                            className="pl-10 block w-full rounded-lg border-gray-300 bg-white text-gray-900 border focus:bg-white focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm py-2.5 transition-all outline-none focus:ring-1"
                             required
                         >
                             <option value="">Select Type</option>
@@ -69,7 +69,7 @@ export default function Step1() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Date & Time</label>
+                        <label className="block text-sm font-medium text-gray-900 mb-2">Date & Time</label>
                         <div className="relative">
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <Calendar className="h-5 w-5 text-gray-400" />
@@ -79,14 +79,14 @@ export default function Step1() {
                                 name="eventDate"
                                 value={formData.eventDate}
                                 onChange={handleChange}
-                                className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:bg-white focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-2.5 transition-all"
+                                className="pl-10 block w-full rounded-lg border-gray-300 bg-white text-gray-900 border focus:bg-white focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm py-2.5 transition-all outline-none focus:ring-1"
                                 required
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                        <label className="block text-sm font-medium text-gray-900 mb-2">Location</label>
                         <div className="relative">
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <MapPin className="h-5 w-5 text-gray-400" />
@@ -96,8 +96,8 @@ export default function Step1() {
                                 name="location"
                                 value={formData.location}
                                 onChange={handleChange}
-                                className="pl-10 block w-full rounded-lg border-gray-300 bg-gray-50 border focus:bg-white focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-2.5 transition-all"
-                                placeholder="e.g. New York City"
+                                className="pl-10 block w-full rounded-lg border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 border focus:bg-white focus:border-zinc-500 focus:ring-zinc-500 sm:text-sm py-2.5 transition-all outline-none focus:ring-1"
+                                placeholder="e.g. Bengaluru"
                                 required
                             />
                         </div>
@@ -108,7 +108,7 @@ export default function Step1() {
             <div className="flex justify-end pt-6">
                 <button
                     type="submit"
-                    className="inline-flex justify-center py-2.5 px-8 border border-transparent shadow-md text-sm font-semibold rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all transform hover:scale-105"
+                    className="inline-flex justify-center py-2.5 px-8 border border-transparent shadow text-sm font-medium rounded-lg text-white bg-zinc-900 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-900 transition-all transform hover:scale-[1.02]"
                 >
                     Next Step &rarr;
                 </button>

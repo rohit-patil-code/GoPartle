@@ -14,25 +14,25 @@ const StepsContainer = () => {
       <div className="mb-10">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Create New Event</h1>
-          <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-            Step {currentStep} of 4
+          <span className="px-3 py-1 bg-zinc-100 text-zinc-800 rounded-full text-xs font-semibold tracking-wide border border-zinc-200">
+            STEP {currentStep} / 4
           </span>
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full bg-gray-100 rounded-full h-3 overflow-hidden">
+        <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
           <div
-            className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-500 ease-out shadow-sm"
+            className="bg-zinc-900 h-2 rounded-full transition-all duration-500 ease-out"
             style={{ width: `${(currentStep / 4) * 100}%` }}
           ></div>
         </div>
 
-        {/* Step Labels (Optional Visual Enhancement) */}
-        <div className="flex justify-between mt-2 text-xs font-medium text-gray-400 px-1">
-          <span className={currentStep >= 1 ? "text-blue-600" : ""}>Basics</span>
-          <span className={currentStep >= 2 ? "text-blue-600" : ""}>Role</span>
-          <span className={currentStep >= 3 ? "text-blue-600" : ""}>Details</span>
-          <span className={currentStep >= 4 ? "text-blue-600" : ""}>Review</span>
+        {/* Step Labels */}
+        <div className="flex justify-between mt-3 text-xs font-medium tracking-wide text-gray-400 px-1">
+          <span className={currentStep >= 1 ? "text-zinc-900" : ""}>BASICS</span>
+          <span className={currentStep >= 2 ? "text-zinc-900" : ""}>ROLE</span>
+          <span className={currentStep >= 3 ? "text-zinc-900" : ""}>DETAILS</span>
+          <span className={currentStep >= 4 ? "text-zinc-900" : ""}>REVIEW</span>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ const StepsContainer = () => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-zinc-200 selection:text-zinc-900">
       <EventFormProvider>
         <StepsContainer />
       </EventFormProvider>
