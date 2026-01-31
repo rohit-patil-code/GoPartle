@@ -1,0 +1,15 @@
+### Create Planner Requirement
+POST http://localhost:5000/api/requirements
+Content-Type: application/json
+
+{
+    "eventName": "Tech Summit 2026",
+    "eventType": "Conference",
+    "eventDate": "2026-06-15T09:00:00.000Z",
+    "location": "San Francisco Convention Center",
+    "hiringFor": "planner",
+    "details": {
+        "budget": 50000,
+        "guestCount": 1000
+    }
+}
