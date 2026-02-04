@@ -136,10 +136,9 @@ app.post('/api/verify-otp', async (req, res) => {
     const otpRecord = await Otp.findOne({ email: email });
 
     if (!otpRecord) {
-      return res.status(400).json({ message: 'No OTP found for this email' });
+      return res.status(400).json({ message: 'OTP has expired. Please request a new one.' });
     }
 
-    // Check if OTP has expired (5 minutes)
     const otpAge = Date.now() - new Date(otpRecord.createdAt).getTime();
     if (otpAge > 5 * 60 * 1000) {
       return res.status(400).json({ message: 'OTP has expired. Please request a new one.' });
